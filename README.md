@@ -11,5 +11,5 @@ Currently, two official plugins are available:
 tailwindcss
 framer motion 
 material ui
-react swappable views
+react swappable views npm i react-swipeable-views
 gsap -> can't keep tabs now

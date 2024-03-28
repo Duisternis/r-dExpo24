@@ -8,8 +8,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { motion, AnimatePresence } from "framer-motion"
 
-import SwipeableViews from 'react-swipeable-views';
-
 import TimeLine from './TimeLine';
 import content from '../../content/cTimeLine';
 
@@ -82,17 +80,13 @@ const Main = () => {
                 </Tabs>
 
 
-                <SwipeableViews
-                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                    className="w-full"
-                    index={value}
-                >
+                <div className="w-full">
                     {Object.keys(content).map((day, idx) => (
                         <TabPanel key={idx} value={value} index={idx} component="div">
                             <TimeLine key={idx} content={content[day]} day={day} />
                         </TabPanel>
                     ))}
-                </SwipeableViews>
+                </div>
             </Box>
         </div>
     )
