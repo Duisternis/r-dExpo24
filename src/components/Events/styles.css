@@ -1,0 +1,6 @@
+.imageMask {
+    mask-image: url(./mask.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
