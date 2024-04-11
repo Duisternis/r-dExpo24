@@ -4,8 +4,11 @@ import Landing from './Landing/Main'
 import TimeLine from './TimeLine/Main'
 import Events from './Events/Main'
 import Navbar from './Navbar/Main'
-import Dummy from './dummyExp'
-import Spline from '@splinetool/react-spline';
+import Footer from './Footer/Main'
+// import Dummy from './dummyExp'
+// import Spline from '@splinetool/react-spline';
+
+import "./Footer/wave_ani.css"
 
 import { useRef } from "react";
 import gsap from "gsap";
@@ -155,6 +158,22 @@ const CompClubber = () => {
                         </div>
                     </section>
                 </div>
+            </div>
+            <div className="hero_area">
+                <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g className="parallax">
+                        <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
+                        <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
+                        <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
+                        <use xlinkHref="#gentle-wave" x="48" y="7" fill="#000" />
+                    </g>
+                </svg>
+            </div>
+            <div className="footer">
+                <Footer />
             </div>
         </div>
     )
