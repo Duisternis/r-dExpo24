@@ -5,6 +5,8 @@ import Tab from '@mui/material/Tab';
 
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import { useMediaQuery } from '@mui/material';
+
 import Box from '@mui/material/Box';
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -56,30 +58,28 @@ function a11yProps(index) {
 const Main = () => {
     const theme = useTheme();
     const [value, setValue] = React.useState(0);
+    // Inside your component
+    const isMobile = useMediaQuery('(max-width:600px)'); // Adjust the max-width as needed
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
     return (
-        <div className="container mx-auto w-3/4">
-            <Box sx={{ flexGrow: 1, display: 'flex', height: "max-content", alignItems: "center" }}>
+        <div className="container mx-auto md:w-3/4 w-full">
+            <Box sx={{ flexGrow: 1, display: 'flex', height: "max-content", alignItems: "center", flexDirection: isMobile ? 'column' : 'row' }}>
                 <Tabs
-                    orientation="vertical"
-                    variant="scrollable"
+                    orientation={isMobile ? "horizontal" : "vertical"}
+                    variant={isMobile ? "fullWidth" : "scrollable"}
                     value={value}
                     onChange={handleChange}
-                    aria-label="Vertical tabs example"
-                    sx={{ borderRight: 1, borderColor: 'divider' }}
+                    aria-label="Tabs"
+                    sx={isMobile ? { borderBottom: 1, borderColor: 'divider' } : { borderRight: 1, borderColor: 'divider' }}
                 >
-
                     {Object.keys(content).map((day, idx) => (
                         <Tab key={idx} label={day} {...a11yProps({ idx })} />
                     ))}
-
                 </Tabs>
-
-
                 <div className="w-full">
                     {Object.keys(content).map((day, idx) => (
                         <TabPanel key={idx} value={value} index={idx} component="div">
@@ -89,6 +89,7 @@ const Main = () => {
                 </div>
             </Box>
         </div>
+
     )
 }
 

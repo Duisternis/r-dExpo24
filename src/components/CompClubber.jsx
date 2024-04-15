@@ -3,6 +3,7 @@ import React from 'react'
 import Landing from './Landing/Main'
 import TimeLine from './TimeLine/Main'
 import Events from './Events/Main'
+import About from './About/Main'
 import Navbar from './Navbar/Main'
 import Footer from './Footer/Main'
 // import Dummy from './dummyExp'
@@ -113,7 +114,7 @@ const CompClubber = () => {
         });
 
         stl.to('.events', {
-            x: document.querySelector(".events").offsetWidth / 2 - 150,
+            y: 80,
             ease: "none",
             duration: 3,
             delay: 1
@@ -141,17 +142,24 @@ const CompClubber = () => {
             <Landing />
 
 
-            <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
-                Time-Line
-            </h1>
+            {/* <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
+                About Us
+            </h1> */}
+            <About />
             <div ref={container} className="overflow-x-hidden">
                 <div className="wrapper flex flex-nowrap items-start w-[200vw]">
                     <section className="section w-[100%] h-fit s1">
-                        <TimeLine />
+                        <div className="h-[100vh]">
+                            Photo of a ship
+                        </div>
                     </section>
                     <section className="section w-[100%]">
                         <div className="events-container">
-                            <h1 className="events font-Bagel text-8xl w-10/12 mx-auto my-20">
+                            <h1 className="events font-Bagel text-8xl w-10/12 mx-auto my-20 -translate-y-[200px]">
+                                Time-Line
+                            </h1>
+                            <TimeLine />
+                            <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
                                 Events
                             </h1>
                             <Events />

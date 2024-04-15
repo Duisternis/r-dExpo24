@@ -58,7 +58,7 @@ const TimeLine = (props) => {
           {props.content.map((label, index) => {
             const labelProps = {};
             labelProps.optional = (
-              <Typography variant="caption">[{label.start_time} - {label.end_time}]</Typography>
+              <Typography variant="caption" className="hidden md:block">[{label.start_time} - {label.end_time}]</Typography>
             );
             return (
               <Step key={index}>

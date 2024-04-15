@@ -4,10 +4,10 @@ const Cards = (props) => {
     return (
         <div className="flex rounded-lg shadow-secondary-1 text-surface bg-surface-dark text-white flex-row my-10 mx-auto w-3/4 h-48">
             <img
-                className="rounded-s-lg"
+                className="rounded-s-lg hidden md:block"
                 src="https://tecdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"
                 alt="" />
-            <div className="flex flex-col justify-start p-6">
+            <div className="flex flex-col justify-start md:p-6">
                 <h5 className="mb-2 text-xl font-medium">{props.content.event}</h5>
                 <p className="mb-4 text-[12px]">
                     <span className="text-[#90caf9]">Timings:</span> {props.content.start_time} - {props.content.end_time}<br />

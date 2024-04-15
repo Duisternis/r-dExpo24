@@ -2,14 +2,80 @@ import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, Preload } from '@react-three/drei'
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
 import logo from '../../assets/navbar_logo.png'
 
 export default function Main() {
+
+    gsap.registerPlugin(useGSAP);
+    const container = useRef();
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        function initIntro() {
+            let tl = gsap.timeline({ delay: 1.2 });
+
+            tl.from('.intro__title', {
+                // x: 100,
+                y: 400,
+                ease: 'power4',
+                duration: 3
+            })
+                .from('.intro__txt', {
+                    x: -100,
+                    opacity: 0,
+                    ease: 'power4',
+                    duration: 3
+                }, 0.7)
+
+            let stl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.intro',
+                    scrub: 1,
+                    start: "top bottom", // position of trigger meets the scroller position
+                    end: "bottom top",
+                    markers: true
+                }
+            });
+
+            stl.to('.intro__title', {
+                x: 400,
+                ease: 'power4.in',
+                duration: 3,
+
+            })
+                .to('.intro__txt', {
+                    y: 100,
+                    ease: 'power4.in',
+                    duration: 3,
+                }, 0);
+        };
+
+        initIntro();
+
+    }, { scope: container });
+
     return (
         <div className="relative h-[100vh]">
             <div className="absolute text-3xl font-Reenie m-10 z-10">
                 <img src={logo} alt="ieeelogo" className="w-[110px] h-[40px]" />
             </div>
+
+            <div ref={container} className="landing-content absolute z-10 w-full">
+                <div className="hidden lg:block intro">
+                    <div className="overflow-hidden">
+                        <div className="intro__title text-8xl">IEEE JUIT SB</div>
+                    </div>
+                    <div className="text-2xl">Presents</div>
+                    <div className="intro__txt text-6xl">R&D Expo 24</div>
+                </div>
+            </div>
+
             <Canvas gl={{ antialias: false, stencil: false }} camera={{ position: [5, 0, 0], fov: 80 }}>
                 <ambientLight intensity={0.2} />
                 {/* <spotLight
@@ -22,7 +88,7 @@ export default function Main() {
           self.target.updateMatrixWorld()
         }}
       /> */}
-                <Hall position={[-6, -1.5, 0]} />
+                <Hall position={[-6, -0.5, 0]} />
 
                 {/* <Rig from={-Math.PI / 2} to={Math.PI / 2.66} /> */}
                 <Preload all />
