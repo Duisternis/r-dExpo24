@@ -1,20 +1,19 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import EmblaCarousel from './EmblaCarousel'
 
-import './css/base.css'
-import './css/sandbox.css'
-import './css/embla.css'
+import image from './dummyEvnt.webp'
+import './styles.css'
 
-const OPTIONS = { loop: true }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+const Main = () => {
+    return (
+        <div className="h-[200vh]">
+            These are the events HOLALLLALA
 
-const Events = () => (
-  <>
-    
-    <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-    
-  </>
-)
-export default Events
+            <img src={image} alt="something" className='w-[300px] imageMask' />
+
+        </div>
+
+    )
+}
+
+export default Main
+
