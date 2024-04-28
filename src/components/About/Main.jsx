@@ -1,6 +1,6 @@
 import React from 'react'
 
-import rndlogo from "../../assets/wtf.png"
+import rndlogo from "../../assets/R&dexpo.png"
 
 const Main = () => {
     return (
