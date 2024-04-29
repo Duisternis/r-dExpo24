@@ -5,7 +5,7 @@ import rndlogo from "../../assets/wtf.png"
 const Main = () => {
     return (
         <div>
-            <div className="sm:flex items-center max-w-screen-xl">
+            <div className="sm:flex items-center max-w-screen-xl shadow-[0px_-19px_109px_-7px_rgba(0,0,0,0.85)]">
                 <div className="sm:w-1/2 p-10">
                     <div className="image object-center text-center">
                         <img src={rndlogo} />

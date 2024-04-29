@@ -1,0 +1,28 @@
+
+   
+   .c-letter {
+       position: relative;
+   }
+   
+   .c-letter:before, .c-letter:after {
+       content: "";
+       background: #fafafa;
+       box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px rgba(222,198,122,0.7);
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       z-index: -2;
+       transition: .5s;
+   }
+   
+   .c-letter:before {
+       left: -5px;
+       top: 2px;  
+       transform: rotate(-1.5deg);
+   }
+   
+   .c-letter:after {
+       right: -3px;
+       top: 0px;
+       transform: rotate(2.4deg);
+   }

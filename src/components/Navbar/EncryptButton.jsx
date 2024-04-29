@@ -59,7 +59,7 @@ const EncryptButton = () => {
         >
             <div className="relative z-10 flex items-center gap-2">
                 <FiLock />
-                <span>{text}</span>
+                <span className="hidden md:block">{text}</span>
             </div>
             <motion.span
                 initial={{

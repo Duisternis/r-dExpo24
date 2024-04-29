@@ -1,11 +1,13 @@
 import React from 'react'
 
-import Landing from './Landing/Main'
+import Landing from './Landing/Main4'
+import EventButton from './EventButton/Main'
 import TimeLine from './TimeLine/Main'
 import Events from './Events/Main'
 import About from './About/Main'
 import Navbar from './Navbar/Main'
 import Footer from './Footer/Main'
+import Preloader from '../Preloader/Preloader'
 // import Dummy from './dummyExp'
 // import Spline from '@splinetool/react-spline';
 
@@ -109,7 +111,7 @@ const CompClubber = () => {
                 start: `top+=${document.querySelector(".s1").offsetHeight}px center`, // position of trigger meets the scroller position
                 end: `top+=${document.querySelector(".s1").offsetHeight + 100}px center`,
 
-                markers: true
+                // markers: false
             }
         });
 
@@ -138,7 +140,7 @@ const CompClubber = () => {
             {/* <section className="w-3/2 h-3/2 border">
                 <Spline scene="https://prod.spline.design/oEjhzrKWPcNVKogz/scene.splinecode" />
             </section> */}
-
+            {/* <Preloader /> */}
             <Landing />
 
 
@@ -159,16 +161,16 @@ const CompClubber = () => {
                                 Time-Line
                             </h1>
                             <TimeLine />
-                            <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
-                                Events
-                            </h1>
-                            <Events />
                         </div>
                     </section>
                 </div>
             </div>
+            <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
+                Events
+            </h1>
+            <Events />
             <div className="hero_area">
-                <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
+                <svg className="waves -z-10" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
                     <defs>
                         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                     </defs>
