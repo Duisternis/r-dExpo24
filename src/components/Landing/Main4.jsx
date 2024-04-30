@@ -14,7 +14,7 @@ import logo from '../../assets/navbar_logo.png'
 
 function Main4() {
     return (
-        <div className="hero-section">
+        <div className="hero">
             <div className='animated-bg w-full h-screen overflow-hidden relative grid place-items-center z-0'>
                 <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
                     <MouseParallaxChild factorX={0} factorY={0}>
@@ -72,6 +72,39 @@ function Main4() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="sec-divider relative overflow-y-hidden">
+
+                <svg
+                    id=""
+                    preserveAspectRatio="xMidYMax meet"
+                    className="svg-separator bottom sep5"
+                    viewBox="0 0 1600 200"
+                    style={{ display: 'block' }}
+                    height="200"
+                >
+                    <polygon
+                        className=""
+                        style={{ fill: '#121212' }}
+                        points="1488,134 1304,100 1068,152 909.935,92.044 672,198 364,142 242,32 -4,95 -4,204 1604,204 1604,0 "
+                    ></polygon>
+                    <polygon
+                        className=""
+                        style={{ opacity: 1, fill: '#95a5a6' }}
+                        points="672,198 364,142 242,32 -4,95 -4,82.333 242,32 374,136 "
+                    ></polygon>
+                    <polygon
+                        className=""
+                        style={{ opacity: 1, fill: '#95a5a6' }}
+                        points="894,86 672,198 909.935,92.044 "
+                    ></polygon>
+                    <polygon
+                        className=""
+                        style={{ opacity: 1, fill: '#6c7a89' }}
+                        points="1068,152 1302,86 1486,126 1604,0 1488,134 1304,100 "
+                    ></polygon>
+                </svg>
+
             </div>
         </div>
     )

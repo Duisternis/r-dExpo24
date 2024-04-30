@@ -1,25 +1,41 @@
 import React from 'react'
 
-import rndlogo from "../../assets/wtf.png"
+import rndlogo from "../../assets/rndlogo.png"
+import main from "../../assets/ieee_main.png"
+import sight from "../../assets/ieee_sight.png"
+import wie from "../../assets/ieee_wie.png"
 
 const Main = () => {
     return (
         <div>
-            <div className="sm:flex items-center max-w-screen-xl shadow-[0px_-19px_109px_-7px_rgba(0,0,0,0.85)]">
+            <div className="sm:flex items-center m-auto max-w-screen-xl">
                 <div className="sm:w-1/2 p-10">
                     <div className="image object-center text-center">
                         <img src={rndlogo} />
                     </div>
                 </div>
-                <div className="sm:w-1/2 p-10">
+                <div className="sm:w-1/2 p-5 lg:p-10">
                     <div className="text">
-                        <h2 className="my-4 font-bold text-3xl  sm:text-4xl ">About <span className="text-[#AC9473]">IEEE JUIT SB</span>
+                        <h2 className="my-4 font-bold text-3xl sm:text-5xl ">About <span className="text-[#AC9473]">R&D Expo 24</span>
                         </h2>
-                        <p className="text-gray-200">
+                        <p className="text-gray-200 text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
                             doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore
                             voluptatum.
                         </p>
+                        <ul className="mt-6 space-y-4 text-sm flex flex-wrap justify-around items-center">
+                            <li>
+                                <img src={main} className="md:w-[120px] w-[100px]" />
+                            </li>
+
+                            <li>
+                                <img src={wie} className="md:w-[120px] w-[100px]" />
+                            </li>
+
+                            <li>
+                                <img src={sight} className="md:w-[120px] w-[100px]" />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
