@@ -159,13 +159,14 @@ function Main4() {
                                     <div>Scroll Down</div>
                                 </div>
                             </div>
-                            <div className=" glass_section w-1/2">
+                            <div className="relative glass_section w-1/2">
                                 <div className='m-auto'>
+                                    <span className='absolute text-lg -top-10 right-10'>Comming Soon...</span>
                                     <CountDown />
                                 </div>
                             </div>
                         </div>
-                        <div className=" glass_section w-full translate-y-[-100%] p-5">
+                        <div className="md:hidden glass_section w-full translate-y-[-100%] p-5">
                             <center>Comming Soon...</center>
                             <div className='m-auto pt-3'>
                                 <CountDown />
