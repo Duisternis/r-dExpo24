@@ -10,9 +10,9 @@ const Cards = (props) => {
             <div className="flex flex-col justify-start md:p-6">
                 <h5 className="mb-2 text-xl font-medium">{props.content.event}</h5>
                 <p className="mb-4 text-[12px]">
-                    <span className="text-[#90caf9]">Timings:</span> {props.content.start_time} - {props.content.end_time}<br />
-                    <span className="text-[#90caf9]">Venue:</span> {props.content.location} <br />
-                    <span className="text-[#90caf9]">Description:</span> {props.content.description} <br />
+                    <span className="text-[#AC9473]">Timings:</span> {props.content.start_time} - {props.content.end_time}<br />
+                    <span className="text-[#AC9473]">Venue:</span> {props.content.location} <br />
+                    <span className="text-[#AC9473]">Description:</span> {props.content.description} <br />
                 </p>
                 <p className="text-xs text-surface/75 dark:text-neutral-300">
                     {props.content.event}

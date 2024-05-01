@@ -9,6 +9,8 @@ export default {
     extend: {
       fontFamily: {
         Bagel: ['"Bagel Fat One"', "system-ui", "sans-serif"],
+        Oldest: ['"Special Elite"', "Monospace"],
+        Caribbean: ["Caribbean", "sans-serif"]
       }
     },
   },

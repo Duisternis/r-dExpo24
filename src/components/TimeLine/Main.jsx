@@ -4,11 +4,13 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 import { useTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { useMediaQuery } from '@mui/material';
 
 import Box from '@mui/material/Box';
 import { motion, AnimatePresence } from "framer-motion"
+import "./hardcode.css"
 
 import TimeLine from './TimeLine';
 import content from '../../content/cTimeLine';
@@ -56,7 +58,30 @@ function a11yProps(index) {
 }
 
 const Main = () => {
-    const theme = useTheme();
+
+
+    const theme = createTheme({
+        palette: {
+            primary: {
+                light: '#fff',
+                main: '#AC9473',
+                dark: '#fff',
+                contrastText: '#fff',
+            },
+            secondary: {
+                light: '#fff',
+                main: '#fff',
+                dark: '#fff',
+                contrastText: '#fff',
+            },
+        },
+        typography: {
+            fontFamily: [
+                'Special Elite',
+            ].join(','),
+        },
+    });
+
     const [value, setValue] = React.useState(0);
     // Inside your component
     const isMobile = useMediaQuery('(max-width:600px)'); // Adjust the max-width as needed
@@ -66,28 +91,30 @@ const Main = () => {
     };
 
     return (
-        <div className="container mx-auto md:w-3/4 w-full">
-            <Box sx={{ flexGrow: 1, display: 'flex', height: "max-content", alignItems: "center", flexDirection: isMobile ? 'column' : 'row' }}>
-                <Tabs
-                    orientation={isMobile ? "horizontal" : "vertical"}
-                    variant={isMobile ? "fullWidth" : "scrollable"}
-                    value={value}
-                    onChange={handleChange}
-                    aria-label="Tabs"
-                    sx={isMobile ? { borderBottom: 1, borderColor: 'divider' } : { borderRight: 1, borderColor: 'divider' }}
-                >
-                    {Object.keys(content).map((day, idx) => (
-                        <Tab key={idx} label={day} {...a11yProps({ idx })} />
-                    ))}
-                </Tabs>
-                <div className="w-full">
-                    {Object.keys(content).map((day, idx) => (
-                        <TabPanel key={idx} value={value} index={idx} component="div">
-                            <TimeLine key={idx} content={content[day]} day={day} />
-                        </TabPanel>
-                    ))}
-                </div>
-            </Box>
+        <div className="container hardcode mx-auto md:w-3/4 w-full md:translate-x-6">
+            <ThemeProvider theme={theme}>
+                <Box sx={{ flexGrow: 1, display: 'flex', height: "max-content", alignItems: "center", flexDirection: isMobile ? 'column' : 'row' }}>
+                    <Tabs
+                        orientation={isMobile ? "horizontal" : "vertical"}
+                        variant={isMobile ? "fullWidth" : "scrollable"}
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="Tabs"
+                        sx={isMobile ? { borderBottom: 1, borderColor: 'divider' } : { borderRight: 1, borderColor: 'divider' }}
+                    >
+                        {Object.keys(content).map((day, idx) => (
+                            <Tab key={idx} label={day} {...a11yProps({ idx })} />
+                        ))}
+                    </Tabs>
+                    <div className="w-full">
+                        {Object.keys(content).map((day, idx) => (
+                            <TabPanel key={idx} value={value} index={idx} component="div">
+                                <TimeLine key={idx} content={content[day]} day={day} />
+                            </TabPanel>
+                        ))}
+                    </div>
+                </Box>
+            </ThemeProvider>
         </div>
 
     )

@@ -7,7 +7,6 @@ import {
 } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
-import DummyImage from "../../assets/dummyEvnt.webp";
 import "./paper-header.css";
 import "./custom-letter.css"
 
@@ -26,7 +25,7 @@ export const RevealBento = (props) => {
                 }}
                 className="mx-auto grid grid-flow-dense grid-cols-12 gap-4 justify-center items-center"
             >
-                <HeaderBlock rlink={props.content.registration_form} />
+                <HeaderBlock rlink={props.content.registration_form} d_image={props.d_image} />
                 <SocialsBlock content={props.content} />
                 <AboutBlock desc={props.content.description} />
             </motion.div>
@@ -67,7 +66,7 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = (props) => (
     <Block className="col-span-12 row-span-2 md:col-span-6">
         <div className="flex items-center justify-center">
-            <TiltCard />
+            <TiltCard d_image={props.d_image} />
             <ButtonWrapper rlink={props.rlink} />
         </div>
     </Block>
@@ -154,7 +153,7 @@ const Logo = (props) => {
     );
 };
 
-const TiltCard = () => {
+const TiltCard = (props) => {
     const ref = useRef(null);
 
     const x = useMotionValue(0);
@@ -203,7 +202,7 @@ const TiltCard = () => {
                 style={{
                     transform: "translateZ(75px)",
                     transformStyle: "preserve-3d",
-                    backgroundImage: `url(${DummyImage})`,
+                    backgroundImage: `url(${props.d_image})`,
                 }}
                 className="absolute inset-4 grid place-content-center rounded-xl bg-cover bg-center shadow-lg"
             >

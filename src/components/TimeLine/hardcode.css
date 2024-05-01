@@ -1,0 +1,21 @@
+.hardcode .css-7wulmq-MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+    color: white;
+}
+
+.hardcode svg{
+    /* Styles for SVG icons */
+    fill: gray; /* Default fill color */
+}
+
+/* Target SVG with Mui-active class */
+.hardcode .Mui-active {
+    fill: #AC9473; /* or any other styles you want */
+}
+
+.hardcode .MuiTabs-root button {
+    color: white;
+}
+
+.hardcode .Mui-selected {
+    color: #AC9473!important; /* or any other styles you want */
+}

@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@font-face {
+  font-family: 'Caribbean';
+  src: url('/Caribbean.ttf') format('truetype');
+}
 
 @tailwind base;
 @tailwind components;

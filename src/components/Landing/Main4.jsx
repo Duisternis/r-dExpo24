@@ -73,7 +73,7 @@ function Main4() {
                     </div>
                 </div>
             </div>
-            <div className="sec-divider relative overflow-y-hidden">
+            <div className="sec-divider relative overflow-x-hidden">
 
                 <svg
                     id=""

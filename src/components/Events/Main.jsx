@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useState } from "react";
 
-import EventButton from '../EventButton/Main'
+import EmblaCarousel from './js/EmblaCarousel'
+import DragCloseDrawer from './EventButton/DragCloseDrawer'
+import treasure from "../../assets/treasure.svg";
+import Content from "./EventButton/Content"
 import imported_content from '../../content/cEvents'
-import image from './dummyEvnt.webp'
+import d_image from "../../assets/dummyEvnt.webp"
+import './css/base.css'
+import './css/embla.css'
+
+const OPTIONS = { dragFree: true, loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 import './styles.css'
 
 const Main = () => {
-    return (
-        <div className="h-[200vh]">
-            These are the events HOLALLLALA
 
-            <img src={image} alt="something" className='w-[300px] imageMask' />
-            <EventButton content={imported_content[1]} />
-            <EventButton content={imported_content[0]} />
+    const [open, setOpen] = useState(false);
+    const [content, setContent] = useState(0);
+
+    const setDrawerState = (state) => {
+        setOpen(state);
+    }
+
+    return (
+        <div>
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} toggler={setDrawerState} setContent={setContent} />
+            {/* <EventButton content={imported_content[1]} /> */}
+            <DragCloseDrawer open={open} setOpen={setOpen}>
+                <div className="mx-auto max-w-4xl space-y-4 text-neutral-400">
+                    <img src={treasure} className="absolute -z-10 top-0 -left-24 w-[40rem]" />
+                    <Content content={imported_content[content]} d_image={d_image} />
+                </div>
+            </DragCloseDrawer>
         </div>
 
     )

@@ -1,17 +1,18 @@
 import React from 'react'
 
 import Landing from './Landing/Main4'
-import EventButton from './EventButton/Main'
 import TimeLine from './TimeLine/Main'
 import Events from './Events/Main'
 import About from './About/Main'
 import Navbar from './Navbar/Main'
+import Sponser from './Sponsers/Main'
 import Footer from './Footer/Main'
 import Preloader from '../Preloader/Preloader'
 // import Dummy from './dummyExp'
 // import Spline from '@splinetool/react-spline';
 
 import "./Footer/wave_ani.css"
+import map from "../assets/map.png"
 
 import { useRef } from "react";
 import gsap from "gsap";
@@ -132,7 +133,7 @@ const CompClubber = () => {
     }, { scope: container });
 
     return (
-        <div>
+        <div className="overflow-x-hidden font-Oldest">
             <Navbar />
 
             {/* <Dummy /> */}
@@ -148,16 +149,26 @@ const CompClubber = () => {
                 About Us
             </h1> */}
             <About />
-            <div ref={container} className="overflow-x-hidden">
+            <div ref={container} className="overflow-x-hidden font-Oldest">
                 <div className="wrapper flex flex-nowrap items-start w-[200vw]">
-                    <section className="section w-[100%] h-fit s1">
-                        <div className="h-[100vh]">
-                            Photo of a ship
+                    <section className="section md:w-[90%] w-full s1">
+                        <div className="md:h-[100vh] md:flex">
+                            <div className='md:w-1/2 w-full md:relative'>
+                                <img src={map} className="-left-32 md:absolute" alt="" />
+                            </div>
+                            <div className='md:w-1/2 w-full mx-auto my-32'>
+                                <div className='text-center font-Caribbean text-7xl'>Explore</div>
+                                <div className='flex w-full justify-around mt-20'>
+                                    <div>Timeline</div>
+                                    <div>Events</div>
+                                    <div>Sponsers</div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className="section w-[100%]">
-                        <div className="events-container">
-                            <h1 className="events font-Bagel text-8xl w-10/12 mx-auto my-20 -translate-y-[200px]">
+                        <div className="events-container overflow-y-hidden">
+                            <h1 className="events font-Caribbean md:text-8xl text-6xl md:w-10/12 mx-auto my-20 md:-translate-y-[200px]">
                                 Time-Line
                             </h1>
                             <TimeLine />
@@ -165,10 +176,14 @@ const CompClubber = () => {
                     </section>
                 </div>
             </div>
-            <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
+            <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
                 Events
             </h1>
             <Events />
+            <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-36">
+                Sponsers
+            </h1>
+            <Sponser />
             <div className="hero_area">
                 <svg className="waves -z-10" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
                     <defs>
@@ -182,9 +197,8 @@ const CompClubber = () => {
                     </g>
                 </svg>
             </div>
-            <div className="footer">
-                <Footer />
-            </div>
+
+            <Footer />
         </div>
     )
 }
