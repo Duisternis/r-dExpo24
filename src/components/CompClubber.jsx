@@ -152,7 +152,7 @@ const CompClubber = () => {
             <div ref={container} className="overflow-x-hidden font-Oldest">
                 <div className="wrapper flex flex-nowrap items-start w-[200vw]">
                     <section className="section md:w-[90%] w-full s1">
-                        <div className="md:h-[100vh] md:flex">
+                        <div className="md:h-[100vh] h-[90vh] md:flex">
                             <div className='md:w-1/2 w-full md:relative'>
                                 <img src={map} className="-left-32 md:absolute" alt="" />
                             </div>
@@ -168,7 +168,10 @@ const CompClubber = () => {
                     </section>
                     <section className="section w-[100%]">
                         <div className="events-container overflow-y-hidden">
-                            <h1 className="events font-Caribbean md:text-8xl text-6xl md:w-10/12 mx-auto my-20 md:-translate-y-[200px]">
+                            <h1 className="hidden md:block events font-Caribbean md:text-8xl text-6xl md:w-10/12 mx-auto my-20 md:-translate-y-[200px]">
+                                Time-Line
+                            </h1>
+                            <h1 className="block md:hidden font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
                                 Time-Line
                             </h1>
                             <TimeLine />
