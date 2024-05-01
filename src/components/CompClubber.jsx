@@ -25,6 +25,29 @@ const CompClubber = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const container = useRef();
+    const container_2 = useRef();
+
+    useGSAP(() => {
+        const section = document.querySelector('.target_section');
+        const img = document.querySelector('.bgimg');
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: `top+=${document.querySelector(".s1").offsetHeight}px center`, // Animation starts when the top of the section hits the center of the viewport
+                end: `bottom+=${document.querySelector(".s1").offsetHeight}px center`, // Animation ends when the bottom of the section hits the center of the viewport
+                scrub: true, // Smoothly scrub through the animation as the user scrolls
+                markers: false
+            }
+        });
+
+        // Animation to set opacity to 1 at the start of the section
+        tl2.to(img, { opacity: 0.2 });
+
+        // Animation to set opacity back to 0 at the end of the section
+        tl2.to(img, { opacity: 0 });
+
+    }, { scope: container_2 });
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -129,7 +152,6 @@ const CompClubber = () => {
         //     duration: 3,
         // }, 0);
 
-
     }, { scope: container });
 
     return (
@@ -182,7 +204,12 @@ const CompClubber = () => {
             <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
                 Events
             </h1>
-            <Events />
+            <div ref={container_2}>
+                <div className="target_section">
+                    <Events />
+                </div>
+            </div>
+
             <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-36">
                 Sponsers
             </h1>

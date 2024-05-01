@@ -1,6 +1,6 @@
 import './App.css'
 import CompClubber from './components/CompClubber'
-import Preloader from './Preloader/Preloader';
+import Preloader from './Preloader/Wrapper';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +16,7 @@ function App() {
     <div>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        {/* <Preloader /> */}
+        <Preloader />
         <CompClubber />
       </ThemeProvider>
     </div>

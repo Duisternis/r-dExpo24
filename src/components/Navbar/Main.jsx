@@ -23,6 +23,8 @@ function Main() {
                 <AnimatedHamburgerButton active={isOpen} setActive={setIsOpen} />
             </div>
 
+            <img src="https://i.pinimg.com/originals/fe/ed/ef/feedefcf233050080c1abd8efc91a08f.jpg" className="bgimg fixed opacity-0 top-0 left-0 -z-50 w-screen h-screen" />
+
             <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
     )

@@ -11,7 +11,7 @@ const Main = () => {
             <div className="sm:flex items-center mx-auto max-w-screen-xl my-20">
                 <div className="sm:w-1/2 p-10">
                     <div className="text">
-                        <h2 className="my-4 font-bold text-3xl sm:text-5xl ">About <span className="text-[#AC9473]">R&D Expo 24</span>
+                        <h2 className="my-4 font-bold md:text-3xl text-5xl ">About <span className="text-[#AC9473]">R&D Expo 24</span>
                         </h2>
                         <p className="text-gray-200 text-justify">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
