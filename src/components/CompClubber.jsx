@@ -149,7 +149,7 @@ const CompClubber = () => {
                 About Us
             </h1> */}
             <About />
-            <div ref={container} className="overflow-x-hidden font-Oldest">
+            <div ref={container} className="overflow-hidden font-Oldest">
                 <div className="wrapper flex flex-nowrap items-start w-[200vw]">
                     <section className="section md:w-[90%] w-full s1">
                         <div className="md:h-[100vh] h-[90vh] md:flex">
