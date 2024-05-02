@@ -79,7 +79,7 @@ const TimeLine = (props) => {
               variants={dynamicCSS}
               custom={aniVal}
             >
-              <Card key={activeStep} content={props.content[activeStep]} />
+              <Card key={activeStep} content={props.content[activeStep]} images={props.images} />
             </motion.div>
           </AnimatePresence>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>

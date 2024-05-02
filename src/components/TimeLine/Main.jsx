@@ -57,7 +57,7 @@ function a11yProps(index) {
     };
 }
 
-const Main = () => {
+const Main = (props) => {
 
 
     const theme = createTheme({
@@ -109,7 +109,7 @@ const Main = () => {
                     <div className="w-full">
                         {Object.keys(content).map((day, idx) => (
                             <TabPanel key={idx} value={value} index={idx} component="div">
-                                <TimeLine key={idx} content={content[day]} day={day} />
+                                <TimeLine key={idx} content={content[day]} day={day} images={props.images} />
                             </TabPanel>
                         ))}
                     </div>

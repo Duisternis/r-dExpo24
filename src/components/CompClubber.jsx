@@ -20,7 +20,22 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+import img1 from '../assets/events/1.jpeg';
+import img2 from '../assets/events/2.jpeg';
+import img3 from '../assets/events/3.jpeg';
+import img4 from '../assets/events/4.jpeg';
+import img5 from '../assets/events/5.jpeg';
+import img6 from '../assets/events/6.jpeg';
+import img7 from '../assets/events/7.jpeg';
+import img8 from '../assets/events/8.jpeg';
+import img9 from '../assets/events/9.jpeg';
+import img10 from '../assets/events/10.jpeg';
+import img11 from '../assets/events/11.jpeg';
+import img12 from '../assets/events/12.jpeg';
+
 const CompClubber = () => {
+
+    const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
     gsap.registerPlugin(useGSAP);
     gsap.registerPlugin(ScrollTrigger);
@@ -212,7 +227,7 @@ const CompClubber = () => {
                             <h1 className="block md:hidden font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
                                 Time-Line
                             </h1>
-                            <TimeLine />
+                            <TimeLine images={images} />
                         </div>
                     </section>
                 </div>
@@ -223,7 +238,7 @@ const CompClubber = () => {
             </h1>
             <div ref={container_2}>
                 <div className="target_section">
-                    <Events />
+                    <Events images={images} />
                 </div>
             </div>
 
