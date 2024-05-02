@@ -31,7 +31,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide relative" key={index}>
-              <img src={`/src/assets/events/${index + 1}.jpeg`} alt="asd" className='embla__slide__number' />
+              <img src={props.images[index]} alt="asd" className='embla__slide__number' />
               <div className='absolute bottom-3 left-1/2 md:-translate-x-1/2'>
                 <EventButton content={index + 1} toggler={props.toggler} setContent={props.setContent} />
               </div>

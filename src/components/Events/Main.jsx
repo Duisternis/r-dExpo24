@@ -26,7 +26,7 @@ const Main = (props) => {
 
     return (
         <div>
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} toggler={setDrawerState} setContent={setContent} />
+            <EmblaCarousel images={props.images} slides={SLIDES} options={OPTIONS} toggler={setDrawerState} setContent={setContent} />
             {/* <EventButton content={imported_content[1]} /> */}
             <DragCloseDrawer open={open} setOpen={setOpen}>
                 <div className="mx-auto max-w-4xl space-y-4 text-neutral-400">
