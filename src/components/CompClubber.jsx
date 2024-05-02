@@ -254,7 +254,7 @@ const CompClubber = () => {
                     <div className='text-justify p-10 md:p-0'>
                         Scan the QR code to register via Google Form instantly. <br />
                         <br />
-                        If the QR code isn't visible, please <a className="text-[#ac9473] underline" target="_blank" href="/src/assets/events/reg.png">click here</a>.
+                        If the QR code isn't visible, please <a className="text-[#ac9473] underline" target="_blank" href="https://raw.githubusercontent.com/Duisternis/r-dExpo24/main/src/assets/events/reg.png">click here</a>.
                     </div>
                 </div>
             </div>
