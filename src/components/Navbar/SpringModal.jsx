@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
 import Link from "./Link";
+import SpLink from "./SpLink";
 import image1 from "../../assets/wtf.png";
 import image2 from "../../assets/nav/timeline.jpeg";
 import image3 from "../../assets/nav/events.webp";
@@ -49,11 +50,11 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
                                         href="locate-events"
                                         isOpen={isOpen} setIsOpen={setIsOpen}
                                     />
-                                    <Link
+                                    <SpLink
                                         heading="Teams"
                                         subheading="Meet our dedicated members."
                                         imgSrc={image4}
-                                        href="locate-about"
+                                        href="https://ieeejuit.co.in/team"
                                         isOpen={isOpen} setIsOpen={setIsOpen}
                                     />
                                 </div>

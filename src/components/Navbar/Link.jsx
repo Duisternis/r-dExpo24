@@ -45,7 +45,7 @@ const CLink = ({ heading, imgSrc, subheading, href, open, setIsOpen }) => {
                 onMouseMove={handleMouseMove}
                 initial="initial"
                 whileHover="whileHover"
-                className="group relative flex items-center justify-between border-b-2 border-neutral-50 py-10 transition-colors duration-500 hover:border-[#CAB89C] md:py-8"
+                className="group relative flex items-center justify-between border-b-2 border-neutral-50 py-10 transition-colors duration-500 hover:border-[#CAB89C] md:py-8 cursor-pointer"
             >
                 <div>
                     <motion.span
