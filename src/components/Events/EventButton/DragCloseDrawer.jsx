@@ -38,7 +38,7 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onClick={handleClose}
-                    className="fixed inset-0 bg-neutral-950/70"
+                    className="fixed inset-0 bg-neutral-950/70 z-30"
                 >
                     <motion.div
                         id="drawer"

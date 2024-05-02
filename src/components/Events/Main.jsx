@@ -10,7 +10,7 @@ import './css/base.css'
 import './css/embla.css'
 
 const OPTIONS = { dragFree: true, loop: true }
-const SLIDE_COUNT = 5
+const SLIDE_COUNT = 10
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 import './styles.css'
@@ -31,7 +31,7 @@ const Main = () => {
             <DragCloseDrawer open={open} setOpen={setOpen}>
                 <div className="mx-auto max-w-4xl space-y-4 text-neutral-400">
                     <img src={treasure} className="absolute -z-10 top-0 -left-24 w-[40rem]" />
-                    <Content content={imported_content[content]} d_image={d_image} />
+                    <Content content={imported_content.find(item => item.id === content)} d_image={`/src/assets/events/${content}.jpeg`} />
                 </div>
             </DragCloseDrawer>
         </div>

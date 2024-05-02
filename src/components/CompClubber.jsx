@@ -9,7 +9,8 @@ import Sponser from './Sponsers/Main'
 import Footer from './Footer/Main'
 import Preloader from '../Preloader/Preloader'
 // import Dummy from './dummyExp'
-// import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline';
+import { Link } from 'react-scroll'
 
 import "./Footer/wave_ani.css"
 import map from "../assets/map.png"
@@ -156,13 +157,12 @@ const CompClubber = () => {
 
     return (
         <div className="overflow-x-hidden font-Oldest">
+            <div id="locate-landing"></div>
             <Navbar />
 
             {/* <Dummy /> */}
 
-            {/* <section className="w-3/2 h-3/2 border">
-                <Spline scene="https://prod.spline.design/oEjhzrKWPcNVKogz/scene.splinecode" />
-            </section> */}
+
             {/* <Preloader /> */}
             <Landing />
 
@@ -170,6 +170,7 @@ const CompClubber = () => {
             {/* <h1 className="font-Bagel text-8xl w-10/12 mx-auto">
                 About Us
             </h1> */}
+            <div id="locate-about"></div>
             <About />
             <div ref={container} className="overflow-hidden font-Oldest">
                 <div className="wrapper flex flex-nowrap items-start w-[200vw]">
@@ -181,15 +182,30 @@ const CompClubber = () => {
                             <div className='md:w-1/2 w-full mx-auto my-32'>
                                 <div className='text-center font-Caribbean text-7xl'>Explore</div>
                                 <div className='flex w-full justify-around mt-20'>
-                                    <div>Timeline</div>
-                                    <div>Events</div>
-                                    <div>Sponsers</div>
+                                    <Link to="locate-timeline"
+                                        smooth={true}
+                                        offset={50}
+                                        duration={1000} className="cursor-pointer hover:text-[#ac9473]">Timeline</Link>
+                                    <Link
+                                        to="locate-events"
+                                        smooth={true}
+                                        offset={50}
+                                        duration={1000} className='cursor-pointer hover:text-[#ac9473]'
+                                    >Events</Link>
+                                    <Link
+                                        to="locate-sponsers"
+                                        smooth={true}
+                                        offset={50}
+                                        duration={2000}
+                                        className='cursor-pointer hover:text-[#ac9473]'
+                                    >Sponsers</Link>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section className="section w-[100%]">
                         <div className="events-container overflow-y-hidden">
+                            <div id="locate-timeline"></div>
                             <h1 className="hidden md:block events font-Caribbean md:text-8xl text-6xl md:w-10/12 mx-auto my-20 md:-translate-y-[200px]">
                                 Time-Line
                             </h1>
@@ -201,6 +217,7 @@ const CompClubber = () => {
                     </section>
                 </div>
             </div>
+            <div id="locate-events"></div>
             <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
                 Events
             </h1>
@@ -210,8 +227,26 @@ const CompClubber = () => {
                 </div>
             </div>
 
+            <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-20">
+                Register Now
+            </h1>
+            <div className='md:flex'>
+                <section className="md:w-1/2 h-full w-full">
+                    <Spline scene="https://prod.spline.design/oEjhzrKWPcNVKogz/scene.splinecode" />
+                </section>
+
+                <div className='md:w-1/2 w-full flex items-center justify-center md:p-10'>
+                    <div className='text-justify p-10 md:p-0'>
+                        Scan the QR code to register via Google Form instantly. <br />
+                        <br />
+                        If the QR code isn't visible, please <a className="text-[#ac9473] underline" target="_blank" href="/src/assets/events/reg.png">click here</a>.
+                    </div>
+                </div>
+            </div>
+
+            <div className="locate-sponsers"></div>
             <h1 className="font-Caribbean md:text-8xl text-6xl w-10/12 mx-auto my-36">
-                Sponsers
+                Sponsors
             </h1>
             <Sponser />
             <div className="hero_area">

@@ -12,9 +12,9 @@ import { Superscript } from '@mui/icons-material';
 
 
 const extra_content = {
-  "Day 1": <span>22<sup>nd</sup> March 2024</span>,
-  "Day 2": <span>23<sup>rd</sup> March 2024</span>,
-  "Day 3": <span>24<sup>th</sup> March 2024</span>,
+  "Day 1": <span>3<sup>rd</sup> May 2024</span>,
+  "Day 2": <span>4<sup>th</sup> May 2024</span>,
+  "Day 3": <span>5<sup>th</sup> May 2024</span>,
 }
 
 const TimeLine = (props) => {

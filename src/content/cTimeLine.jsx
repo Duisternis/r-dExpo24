@@ -2,81 +2,106 @@ const content = {
     "Day 1": [
         {
             "id": 1,
-            "start_time": "09:00",
-            "end_time": "10:00",
-            "event": "Opening Ceremony",
-            "location": "Main Stage",
-            "description": "The opening ceremony will be held at the main stage."
+            "start_time": "10:00",
+            "end_time": "12:00",
+            "event": "Hack-Expo",
+            "location": "Acads Zero Floor",
+            "description": "Showcasing creations and projects."
         },
         {
             "id": 2,
-            "start_time": "10:30",
-            "end_time": "11:30",
-            "event": "Keynote Address",
-            "location": "Auditorium",
-            "description": "Keynote speech by renowned speaker."
+            "start_time": "17:00",
+            "end_time": "18:30",
+            "event": "Inauguration Ceremony",
+            "location": "LT-2",
+            "description": "Official opening ceremony of the event."
         },
         {
             "id": 3,
-            "start_time": "12:00",
-            "end_time": "13:00",
-            "event": "Lunch Break",
-            "location": "Cafeteria",
-            "description": "Enjoy a delicious lunch provided by the organizers."
+            "start_time": "18:30",
+            "end_time": "20:30",
+            "event": "FIFA Gaming Night",
+            "location": "TV Room Shastri",
+            "description": "Gaming night featuring FIFA."
         },
         {
             "id": 4,
-            "start_time": "14:00",
-            "end_time": "15:30",
-            "event": "Workshop",
-            "location": "Room 101",
-            "description": "Learn the basics of machine learning in this interactive workshop."
+            "start_time": "18:30",
+            "end_time": "20:30",
+            "event": "Mortal Kombat Gaming Night",
+            "location": "CR-1",
+            "description": "Gaming night featuring Mortal Kombat."
         }
     ],
     "Day 2": [
         {
             "id": 5,
-            "start_time": "09:30",
-            "end_time": "10:30",
-            "event": "Panel Discussion: Future of Technology",
-            "location": "Panel Room",
-            "description": "Experts discuss the future trends and innovations in technology."
+            "start_time": "11:00",
+            "end_time": "13:00",
+            "event": "Coding Premier League",
+            "location": "LT-2",
+            "description": "Coding contest with a twist."
         },
         {
             "id": 6,
-            "start_time": "11:00",
-            "end_time": "12:30",
-            "event": "Networking Session",
-            "location": "Lounge Area",
-            "description": "Opportunity to network with fellow attendees and speakers."
+            "start_time": "17:00",
+            "end_time": "19:00",
+            "event": "BGMI Gaming Night",
+            "location": "LT-2",
+            "description": "Gaming night featuring BGMI."
+        },
+        {
+            "id": 3,
+            "start_time": "18:30",
+            "end_time": "20:30",
+            "event": "FIFA Gaming Night",
+            "location": "TV Room Shastri",
+            "description": "Gaming night featuring FIFA."
+        },
+        {
+            "id": 4,
+            "start_time": "18:30",
+            "end_time": "20:30",
+            "event": "Mortal Kombat Gaming Night",
+            "location": "CR-1",
+            "description": "Gaming night featuring Mortal Kombat."
         },
         {
             "id": 7,
-            "start_time": "14:00",
-            "end_time": "16:00",
-            "event": "Hackathon Kickoff",
-            "location": "Hackathon Hall",
-            "description": "Teams gather for the kickoff of the hackathon competition."
+            "start_time": "21:00",
+            "end_time": "23:00",
+            "event": "Movie Night: Ford v Ferrari",
+            "location": "LT-1",
+            "description": "Screening of 'Ford v Ferrari'."
+        },
+        {
+            "id": 8,
+            "start_time": "21:00",
+            "end_time": "23:00",
+            "event": "Movie Night: Dhol",
+            "location": "LT-2",
+            "description": "Screening of 'Dhol'."
         }
     ],
     "Day 3": [
         {
-            "id": 8,
-            "start_time": "10:00",
-            "end_time": "11:30",
-            "event": "Panel Discussion: Diversity in Tech",
-            "location": "Panel Room",
-            "description": "Explore the importance of diversity and inclusion in the tech industry."
+            "id": 9,
+            "start_time": "16:30",
+            "end_time": "18:30",
+            "event": "Pixel Clash",
+            "location": "CR-8",
+            "description": "Competition for UI designing."
         },
         {
-            "id": 9,
-            "start_time": "12:00",
-            "end_time": "13:00",
-            "event": "Lunch Break",
-            "location": "Cafeteria",
-            "description": "Another delicious lunch awaits you!"
+            "id": 10,
+            "start_time": "16:30",
+            "end_time": "18:30",
+            "event": "Web Ahoy",
+            "location": "CR-5",
+            "description": "Competition for website designing."
         }
     ]
-};
+}
+
 
 export default content;

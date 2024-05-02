@@ -143,12 +143,8 @@ const AboutBlock = (props) => (
 const Logo = (props) => {
     // Temp logo from https://logoipsum.com/
     return (
-        <div className="ml-auto mr-0 mb-12 text-black w-fit">
-            <div class="paper pink">
-                <div class="tape-section"></div>
-                <p> {props.title} </p>
-                <div class="tape-section"></div>
-            </div>
+        <div className="ml-auto mr-0 mb-12 text-black w-fit font-bold text-5xl">
+            <p> {props.title} </p>
         </div>
     );
 };
@@ -196,7 +192,7 @@ const TiltCard = (props) => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative grow h-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+            className="relative grow h-96 rounded-xl bg-gradient-to-br from-[#DCCEB4] to-[#5D532F]"
         >
             <div
                 style={{
@@ -214,9 +210,9 @@ const TiltCard = (props) => {
 const ButtonWrapper = (props) => {
     return (
         <div className="flex relative items-center justify-center -rotate-90 w-32">
-            <button className="absolute rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black text-xl transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none w-96 h-24">
-                REGISTRATION LINK
-            </button>
+            <a href="https://forms.gle/SqEa1d6KVrRJ6KUu5" target='_blank' className="absolute rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black text-xl transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none w-96 h-24 flex items-center justify-center">
+                <span>REGISTRATION LINK</span>
+            </a>
         </div>
     );
 };

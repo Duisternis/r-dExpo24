@@ -30,7 +30,7 @@ const ShiftingCountdown = () => {
 
         const now = new Date();
 
-        const distance = +end - +now;
+        const distance = (end - now > 0) ? +end - +now : 0;
 
         const days = Math.floor(distance / DAY);
         const hours = Math.floor((distance % DAY) / HOUR);

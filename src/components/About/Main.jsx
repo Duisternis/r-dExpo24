@@ -14,9 +14,7 @@ const Main = () => {
                         <h2 className="my-4 font-bold md:text-3xl text-5xl ">About <span className="text-[#AC9473]">R&D Expo 24</span>
                         </h2>
                         <p className="text-gray-200 text-justify">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
-                            doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore
-                            voluptatum.
+                            Join us at IEEE Student Branch JUIT's R&D Expo, the premier tech event at the university! From Hack-Expo to Gaming Nights and Movie Nights, we have a packed schedule of exciting activities for everyone. Don't miss out on Coding Premier League, BGMI Gaming Night, Pixel Clash, Web Ahoy, and more. Mark your calendars and register now for a weekend filled with tech, fun, and unforgettable memories!
                         </p>
                         <ul className="mt-6 space-y-4 text-sm flex flex-wrap justify-around items-center">
                             <li>

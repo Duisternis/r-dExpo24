@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 import logo_main_ref from "../../assets/rndlogo.png"
 import ori_ref from "../../assets/landing/original.png"
@@ -72,7 +73,7 @@ function Main4() {
 
     return (
         <div className="hero">
-            <div className='animated-bg w-full h-screen overflow-hidden relative grid place-items-center z-0'>
+            <div className='animated-bg w-full h-screen overflow-hidden relative grid place-items-center z-0' ref={l_container}>
                 <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
                     <MouseParallaxChild factorX={0} factorY={0}>
                         <img src={bg_ref} className='w-full absolute' />
@@ -81,7 +82,7 @@ function Main4() {
                         <img src={xl_ref} className='w-full absolute' />
                     </MouseParallaxChild>
                     <MouseParallaxChild factorX={0} factorY={0}>
-                        <img src={logo_ref} className='w-full absolute' />
+                        <img src={logo_ref} className='w-full absolute z-30' />
                     </MouseParallaxChild>
                     <MouseParallaxChild factorX={0.4} factorY={0.5}>
                         <img src={lg_ref} className='w-full absolute' />
@@ -100,13 +101,25 @@ function Main4() {
                     }} />
                     <img src={logo_main_ref} className="absolute top-1/4 left-0" />
                 </div>
+                <div className="absolute top-0 left-0 my-10 mx-16 z-30">
+                    <a href="https://ieeejuit.co.in/" target="_blank">
+
+                        <img src={logo} alt="ieeelogo" className="w-[112px] h-[42px]" />
+                    </a>
+                </div>
+
+                <div className="intro__txt absolute top-1/4 left-0 w-min z-40 pointer-events-auto">
+                    <div className="p-10"><a href="https://www.instagram.com/ieeejuit/" target="_blank"><InstagramIcon /></a></div>
+                    <div className="px-10"><a href="https://github.com/IEEE-JUIT-SB" target="_blank"><GitHubIcon /></a></div>
+                    <div className="p-10"><a href="http://www.linkedin.com/in/ieeejuitsb" target="_blank"><LinkedInIcon /></a></div>
+                    <div className="px-10"><a href="https://twitter.com/ieee_juit" target="_blank"><TwitterIcon /></a></div>
+                </div>
+
 
                 <div className='true_overlay absolute w-full h-screen bg-black bg-opacity-0 z-10 pointer-events-none'>
-                    <div className="absolute my-10 mx-16 z-10">
-                        <img src={logo} alt="ieeelogo" className="w-[112px] h-[42px]" />
-                    </div>
 
-                    <div ref={l_container}>
+
+                    <div>
                         <div className='absolute md:block hidden top-1/4 left-1/2'>
                             <div className="landing-content z-10">
                                 <div className="intro">
@@ -117,7 +130,7 @@ function Main4() {
                             </div>
                         </div>
                         <div className='absolute md:hidden top-[15%] left-1/2 -translate-x-1/2'>
-                            <div className="landing-content z-10">
+                            <div className="landing-content">
                                 <div className="intro">
                                     <div className="">
                                         <div className="text-2xl w-max">IEEE JUIT SB Presents</div>
@@ -125,12 +138,6 @@ function Main4() {
                                 </div>
                             </div>
 
-                        </div>
-
-                        <div className="intro__txt absolute top-1/4 left-0 w-min">
-                            <div className="p-10"><a href="#"><InstagramIcon /></a></div>
-                            <div className="px-10"><a href="#"><GitHubIcon /></a></div>
-                            <div className="p-10"><a href="#"><LinkedInIcon /></a></div>
                         </div>
                     </div>
 
@@ -161,13 +168,13 @@ function Main4() {
                             </div>
                             <div className="relative glass_section w-1/2">
                                 <div className='m-auto'>
-                                    <span className='absolute text-lg -top-10 right-10'>Comming Soon...</span>
+                                    <span className='absolute text-lg -top-10 right-10'>Coming Soon...</span>
                                     <CountDown />
                                 </div>
                             </div>
                         </div>
                         <div className="md:hidden glass_section w-full translate-y-[-100%] p-5">
-                            <center>Comming Soon...</center>
+                            <center>Coming Soon...</center>
                             <div className='m-auto pt-3'>
                                 <CountDown />
                             </div>

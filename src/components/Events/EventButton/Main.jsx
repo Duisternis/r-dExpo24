@@ -18,7 +18,7 @@ const Main = (props) => {
         <div className="">
             <button
                 onClick={open_handler}
-                className="rounded bg-indigo-500 px-2 py-2 text-white transition-colors hover:bg-indigo-600"
+                className="rounded bg-[#5D532F] px-2 py-2 text-white transition-colors hover:bg-[#000]"
             >
                 <InfoIcon />
             </button>
